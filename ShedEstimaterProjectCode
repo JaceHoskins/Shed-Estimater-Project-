@@ -1,0 +1,313 @@
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+import time
+import csv
+
+
+## Website Connection
+Path = '/Users/jacehoskins/Python/chromedriver'
+driver = webdriver.Chrome(Path)
+
+## 2x4x8 Stud title,price
+
+driver.get('https://www.homedepot.com/p/2-in-x-4-in-x-8-ft-Prime-Whitewood-Stud-058449/312528776')
+
+driver.implicitly_wait(10)
+
+title = driver.find_element(By.XPATH,'//*[@id="root"]/div/div[3]/div/div/div[2]/div/div[1]/div/div/div[2]/span/h1').text
+print(title)
+
+time.sleep(2)
+
+dollars = driver.find_element(By.XPATH,'//*[@id="standard-price"]/div/div/span[2]').text
+decimal = '.'
+cents = driver.find_element(By.XPATH,'//*[@id="standard-price"]/div/div/span[3]').text
+price = dollars + decimal + cents
+print(price)
+
+## 2x4x10 Stud title,price
+
+driver.get('https://www.homedepot.com/p/2-in-x-4-in-x-10-ft-Appearance-Grade-Spruce-Lumber-6091/314732316')
+
+driver.implicitly_wait(10)
+
+title1 = driver.find_element(By.XPATH,'//*[@id="root"]/div/div[3]/div/div/div[2]/div/div[1]/div/div/div[3]/span/h1').text
+print(title1)
+
+time.sleep(2)
+
+dollars1 = driver.find_element(By.XPATH,'//*[@id="standard-price"]/div/div/span[2]').text
+decimal = '.'
+cents1 = driver.find_element(By.XPATH,'//*[@id="standard-price"]/div/div/span[3]').text
+price1 = dollars1 + decimal + cents1
+print(price1)
+
+## 2x4x12 Stud title,price
+
+driver.get('https://www.homedepot.com/p/2-in-x-4-in-x-12-ft-STD-and-BTR-KD-HT-SPF-Dimensional-Lumber-058440/312528815')
+
+driver.implicitly_wait(10)
+
+title2 = driver.find_element(By.XPATH,'//*[@id="root"]/div/div[3]/div/div/div[2]/div/div[1]/div/div/div[3]/span/h1').text
+print(title2)
+
+time.sleep(2)
+
+dollars2 = driver.find_element(By.XPATH,'//*[@id="standard-price"]/div/div/span[2]').text
+decimal = '.'
+cents2 = driver.find_element(By.XPATH,'//*[@id="standard-price"]/div/div/span[3]').text
+price2 = dollars2 + decimal + cents2
+print(price2)
+
+## 2” x 6” x 8’
+
+driver.get('https://www.homedepot.com/p/2-in-x-6-in-x-8-ft-2-BTR-KD-HT-SPF-Dimensional-Lumber-058443/312528832')
+
+driver.implicitly_wait(10)
+
+title3 = driver.find_element(By.XPATH,'//*[@id="root"]/div/div[3]/div/div/div[2]/div/div[1]/div/div/div[2]/span/h1').text
+print(title3)
+
+time.sleep(2)
+
+dollars3 = driver.find_element(By.XPATH,'//*[@id="standard-price"]/div/div/span[2]').text
+decimal = '.'
+cents3 = driver.find_element(By.XPATH,'//*[@id="standard-price"]/div/div/span[3]').text
+price3 = dollars3 + decimal + cents3
+print(price3)
+
+## 2” x 6” x 10’ PT
+
+driver.get('https://www.homedepot.com/p/WeatherShield-2-in-x-6-in-x-10-ft-2-Prime-Ground-Contact-Pressure-Treated-Lumber-253921/206967800')
+
+driver.implicitly_wait(10)
+
+title4 = driver.find_element(By.XPATH,'//*[@id="root"]/div/div[3]/div/div/div[2]/div/div[1]/div/div/div[3]/span/h1').text
+print(title4)
+
+time.sleep(2)
+
+dollars4 = driver.find_element(By.XPATH,'//*[@id="standard-price"]/div/div/span[2]').text
+decimal = '.'
+cents4 = driver.find_element(By.XPATH,'//*[@id="standard-price"]/div/div/span[3]').text
+price4 = dollars4 + decimal + cents4
+print(price4)
+
+## 4” x 4” x 10’ PT
+
+driver.get('https://www.homedepot.com/p/4-in-x-4-in-x-10-ft-2-Pressure-Treated-Ground-Contact-Southern-Pine-Timber-4220254/100025396')
+
+driver.implicitly_wait(10)
+
+title5 = driver.find_element(By.XPATH,'//*[@id="root"]/div/div[3]/div/div/div[2]/div/div[1]/div/div/div[2]/span/h1').text
+print(title5)
+
+time.sleep(2)
+
+dollars5 = driver.find_element(By.XPATH,'//*[@id="standard-price"]/div/div/span[2]').text
+decimal = '.'
+cents5 = driver.find_element(By.XPATH,'//*[@id="standard-price"]/div/div/span[3]').text
+price5 = dollars5 + decimal + cents5
+print(price5)
+
+## 1” x 6” x 8’
+
+driver.get('https://www.homedepot.com/p/1-in-x-6-in-x-8-ft-Premium-Kiln-Dried-Square-Edge-Whitewood-Common-Board-914770/100028725')
+
+driver.implicitly_wait(10)
+
+title6 = driver.find_element(By.XPATH,'//*[@id="root"]/div/div[3]/div/div/div[2]/div/div[1]/div/div/div[3]/span/h1').text
+print(title6)
+
+time.sleep(2)
+
+dollars6 = driver.find_element(By.XPATH,'//*[@id="standard-price"]/div/div/span[2]').text
+decimal = '.'
+cents6 = driver.find_element(By.XPATH,'//*[@id="standard-price"]/div/div/span[3]').text
+price6 = dollars6 + decimal + cents6
+print(price6)
+
+## 1” x 6” x 12’
+
+driver.get('https://www.homedepot.com/p/1-in-x-6-in-x-12-ft-Premium-Kiln-Dried-Square-Edge-Whitewood-Common-Board-914797/100071377')
+
+driver.implicitly_wait(10)
+
+title7 = driver.find_element(By.XPATH,'//*[@id="root"]/div/div[3]/div/div/div[2]/div/div[1]/div/div/div[3]/span/h1').text
+print(title7)
+
+time.sleep(2)
+
+dollars7 = driver.find_element(By.XPATH,'//*[@id="standard-price"]/div/div/span[2]').text
+decimal = '.'
+cents7 = driver.find_element(By.XPATH,'//*[@id="standard-price"]/div/div/span[3]').text
+price7 = dollars7 + decimal + cents7
+print(price7)
+
+## 1” x 4” x 8’
+
+driver.get('https://www.homedepot.com/p/1-in-x-4-in-x-8-ft-Premium-Kiln-Dried-Square-Edge-Whitewood-Common-Board-914681/100023465')
+
+driver.implicitly_wait(10)
+
+title8 = driver.find_element(By.XPATH,'//*[@id="root"]/div/div[3]/div/div/div[2]/div/div[1]/div/div/div[3]/span/h1').text
+print(title8)
+
+time.sleep(2)
+
+dollars8 = driver.find_element(By.XPATH,'//*[@id="standard-price"]/div/div/span[2]').text
+decimal = '.'
+cents8 = driver.find_element(By.XPATH,'//*[@id="standard-price"]/div/div/span[3]').text
+price8 = dollars8 + decimal + cents8
+print(price8)
+
+## 4’ x 8’ ½” OSB
+
+driver.get('https://www.homedepot.com/p/1-2-4-ft-x-8-ft-Oriented-Strand-Board-660663/100072564')
+
+driver.implicitly_wait(10)
+
+title9 = driver.find_element(By.XPATH,'//*[@id="root"]/div/div[3]/div/div/div[2]/div/div[1]/div/div/div[2]/span/h1').text
+print(title9)
+
+time.sleep(2)
+
+dollars9 = driver.find_element(By.XPATH,'//*[@id="unit-price"]/div[1]/div[2]/span[2]').text
+decimal = '.'
+cents9 = driver.find_element(By.XPATH,'//*[@id="unit-price"]/div[1]/div[2]/span[3]').text
+price9 = dollars9 + decimal + cents9
+print(price9)
+
+## 4’ x 8’ Siding Panel
+
+driver.get('https://www.homedepot.com/p/Plytanium-Plywood-Siding-Panel-T1-11-8-IN-OC-Nominal-19-32-in-x-4-ft-x-8-ft-Actual-0-563-in-x-48-in-x-96-in-113699/100000016')
+
+driver.implicitly_wait(10)
+
+title10 = driver.find_element(By.XPATH,'//*[@id="root"]/div/div[3]/div/div/div[2]/div/div[1]/div/div/div[2]/span/h1').text
+print(title10)
+
+time.sleep(2)
+
+dollars10 = driver.find_element(By.XPATH,'//*[@id="standard-price"]/div/div/span[2]').text
+decimal = '.'
+cents10 = driver.find_element(By.XPATH,'//*[@id="standard-price"]/div/div/span[3]').text
+price10 = dollars10 + decimal + cents10
+print(price10)
+
+
+## 3 Tab Roof Shingles
+
+driver.get('https://www.homedepot.com/p/GAF-Royal-Sovereign-Charcoal-Algae-Resistant-3-Tab-Roofing-Shingles-33-33-sq-ft-per-Bundle-26-pieces-0201180/100040028')
+
+driver.implicitly_wait(10)
+
+title11 = driver.find_element(By.XPATH,'//*[@id="root"]/div/div[3]/div/div/div[2]/div/div[1]/div/div/div[3]/span/h1').text
+print(title11)
+
+time.sleep(2)
+
+dollars11 = driver.find_element(By.XPATH,'//*[@id="unit-price"]/div[1]/div[2]/span[2]').text
+decimal = '.'
+cents11 = driver.find_element(By.XPATH,'//*[@id="unit-price"]/div[1]/div[2]/span[3]').text
+price11 = dollars11 + decimal + cents11
+print(price11)
+
+## Vinyl Window 37.75 in. x 56.75 in
+
+driver.get('https://www.homedepot.com/p/American-Craftsman-37-75-in-x-56-75-in-70-Series-Low-E-Argon-Glass-Double-Hung-White-Vinyl-Fin-with-J-Window-Screen-Incl-70-DH-FIN/203157331')
+
+driver.implicitly_wait(10)
+
+title12 = driver.find_element(By.XPATH,'//*[@id="root"]/div/div[3]/div/div/div[2]/div/div[1]/div/div/div[3]/span/h1').text
+print(title12)
+
+time.sleep(2)
+
+dollars12 = driver.find_element(By.XPATH,'//*[@id="standard-price"]/div/div/span[2]').text
+decimal = '.'
+cents12 = driver.find_element(By.XPATH,'//*[@id="standard-price"]/div/div/span[3]').text
+price12 = dollars12 + decimal + cents12
+print(price12)
+
+## 3 1/2” galvanized nails
+
+driver.get('https://www.homedepot.com/p/Paslode-3-in-x-0-120-Gauge-30-Degree-Galvanized-Ring-Shank-Paper-Tape-Framing-Nails-2000-per-Box-650385/100678208')
+
+driver.implicitly_wait(10)
+
+title13 = driver.find_element(By.XPATH,'//*[@id="root"]/div/div[3]/div/div/div[2]/div/div[1]/div/div/div[3]/span/h1').text
+print(title13)
+
+time.sleep(2)
+
+dollars13 = driver.find_element(By.XPATH,'//*[@id="standard-price"]/div/div/span[2]').text
+decimal = '.'
+cents13 = driver.find_element(By.XPATH,'//*[@id="standard-price"]/div/div/span[3]').text
+price13 = dollars13 + decimal + cents13
+print(price13)
+
+## 1 ½” roofing nails
+
+driver.get('https://www.homedepot.com/p/Grip-Rite-11-x-1-1-2-in-Electro-Galvanized-Steel-Roofing-Nails-30-lb-Pack-112EGRFGBK/100171631')
+
+driver.implicitly_wait(10)
+
+title14 = driver.find_element(By.XPATH,'//*[@id="root"]/div/div[3]/div/div/div[2]/div/div[1]/div/div/div[3]/span/h1').text
+print(title14)
+
+time.sleep(2)
+
+dollars14 = driver.find_element(By.XPATH,'//*[@id="standard-price"]/div/div/span[2]').text
+decimal = '.'
+cents14 = driver.find_element(By.XPATH,'//*[@id="standard-price"]/div/div/span[3]').text
+price14 = dollars14 + decimal + cents14
+print(price14)
+
+## 2” finishing nails
+
+driver.get('https://www.homedepot.com/p/Grip-Rite-13-x-2-in-6-Penny-Bright-Steel-Finish-Nails-6-oz-Pack-6F6OZ/300260099')
+
+driver.implicitly_wait(10)
+
+title15 = driver.find_element(By.XPATH,'//*[@id="root"]/div/div[3]/div/div/div[2]/div/div[1]/div/div/div[3]/span/h1').text
+print(title15)
+
+time.sleep(2)
+
+dollars15 = driver.find_element(By.XPATH,'//*[@id="standard-price"]/div/div/span[2]').text
+decimal = '.'
+cents15 = driver.find_element(By.XPATH,'//*[@id="standard-price"]/div/div/span[3]').text
+price15 = dollars15 + decimal + cents15
+print(price15)
+
+
+## csv connection
+
+Product_header = ['titile', 'price']
+Product_data = [
+    [title,price],
+    [title1,price1],
+    [title2,price2],
+    [title3,price3],
+    [title4,price4],
+    [title5,price5],
+    [title6,price6],
+    [title7,price7],
+    [title8,price8],
+    [title9,price9],
+    [title10,price10],
+    [title11,price11],
+    [title12,price12],
+    [title13,price13],
+    [title14,price14],
+    [title15,price15]
+]
+with open('ShedEstimaterProject.csv', 'w') as file:
+    writer = csv.writer(file)
+    writer.writerow(Product_header)
+    writer.writerows(Product_data)
+
+driver.quit()

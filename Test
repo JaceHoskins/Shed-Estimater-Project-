@@ -1,0 +1,41 @@
+import csv
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+import time
+import csv
+
+
+## Website Connection
+Path = '/Users/jacehoskins/Python/chromedriver'
+driver = webdriver.Chrome(Path)
+
+
+## 1” x 4” x 8’
+
+driver.get('https://www.homedepot.com/p/1-in-x-4-in-x-8-ft-Premium-Kiln-Dried-Square-Edge-Whitewood-Common-Board-914681/100023465')
+
+driver.implicitly_wait(10)
+
+title8 = driver.find_element(By.XPATH,'//*[@id="root"]/div/div[3]/div/div/div[2]/div/div[1]/div/div/div[3]/span/h1').text
+print(title8)
+
+time.sleep(2)
+
+dollars8 = driver.find_element(By.XPATH,'//*[@id="standard-price"]/div/div/span[2]').text
+decimal = '.'
+cents8 = driver.find_element(By.XPATH,'//*[@id="standard-price"]/div/div/span[3]').text
+price8 = dollars8 + decimal + cents8
+print(price8)
+
+
+
+
+##[import csv
+##Product_header = ['titile', 'price']
+#Product_data = [title,price]
+#with open('example.csv', 'w') as file:
+    #writer = csv.writer(file)
+    #writer.writerow(Product_header)
+    #writer.writerow(Product_data)]
